@@ -1,0 +1,18 @@
+form {
+    width: 484px;
+    margin: auto;
+    /* margin-top: 10px; */
+    padding: .7rem 2rem;
+    border: 2px solid #0dcaf0;
+    border-radius: 1rem;
+}
+
+.testing {
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.username {
+    margin-bottom: 2px;
+    text-align: center;
+}

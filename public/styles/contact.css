@@ -1,0 +1,114 @@
+.bottom-border {
+    border-bottom: 3px solid #a21caf;
+}
+
+.blogify-logo {
+    width: 90px;
+    height: 68px;
+    border-radius: 18px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.best-photo {
+    border-radius: 14rem;
+}
+
+.contact-container {
+    position: relative;
+    top: -97px;
+}
+
+.form-container {
+    padding: 5rem 1.5rem;
+    position: relative;
+    top: -45px;
+    border: 2px solid #a21caf;
+    border-radius: 8rem;
+}
+
+.message {
+    position: relative;
+    top: -30px;
+}
+
+.name-segment {
+    position: relative;
+    left: 1.4rem;
+}
+
+.email-segment {
+    position: relative;
+    left: 1.7rem;
+}
+
+.contact-button {
+    background-color: transparent;
+    border: 1px solid #0dcaf0;
+}
+
+.contact-button:hover {
+    background-color: #0dcaf0;
+}
+
+.info-container {
+    border: 2px solid #a21caf;
+    border-radius: 1.6rem;
+    width: 406px;
+    position: relative;
+    top: -170px;
+    left: 500px;
+}
+
+.info-container * {
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+@media (max-width: 1024px) {
+    .info-container {
+        position: relative;
+        left: 0;
+    }
+
+    .form-container {
+        width: 400px;
+    }
+
+    .contact-container {
+        position: relative;
+        left: 100px;
+    }
+}
