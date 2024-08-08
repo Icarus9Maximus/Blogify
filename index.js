@@ -135,6 +135,3 @@ app.post("/update/:index", (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}.`);
 });
-
-
-// 45 Commissioner street at 10:00. 15 August 2024
