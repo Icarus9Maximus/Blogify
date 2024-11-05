@@ -32,12 +32,16 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.render("index", { items });
-});
+// app.get("/", (req, res) => {
+//     res.render("index", { items });
+// });
 
 app.get("/home", (req, res) => {
-    res.render("home");
+    res.render("home", { items })
+})
+
+app.get("/create", (req, res) => {
+    res.render("index");
 });
 
 app.get("/authorization", (req, res) => {
