@@ -34,15 +34,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.render("home", { items })
+    res.render("Home.ejs", { items })
 })
 
 app.get("/create", (req, res) => {
-    res.render("index");
+    res.render("index.ejs");
 });
 
 app.get("/authorization", (req, res) => {
-    res.render("authorization");
+    res.render("Authorization.ejs");
 });
 
 app.post("/authorize", (req, res) => {
@@ -59,11 +59,11 @@ app.get("/password", (req, res) => {
 })
 
 app.get("/main", (req, res) => {
-    res.render("main", { items }); // Pass items array to the view
+    res.render("main.ejs", { items }); // Pass items array to the view
 });
 
 app.get("/contact", (req, res) => {
-    res.render("contact");
+    res.render("Contact.ejs");
 })
 
 app.post("/contact", (req, res) => {
