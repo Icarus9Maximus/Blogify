@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 
+// Initialize express and define the port
 const app = express();
 const port = 3000;
 
@@ -32,11 +33,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// app.get("/", (req, res) => {
-//     res.render("index", { items });
-// });
-
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     res.render("home", { items })
 })
 
@@ -50,7 +47,7 @@ app.get("/authorization", (req, res) => {
 
 app.post("/authorize", (req, res) => {
     const { username, password } = req.body;
-    if (username === "Blogger" && password === "Blogg33r") {
+    if (username === "Blogger" && password === "Blogg33r") { // If the username and password match these, allow access
         res.redirect("/main");
     } else {
         res.redirect("/authorization");
