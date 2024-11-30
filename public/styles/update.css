@@ -1,4 +1,4 @@
-*, *::before, *::after {
+/* *, *::before, *::after { 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,9 +14,6 @@
     border-radius: 18px;
 }
 
-
-
-
 .to-do-list-container {
     display: flex;
     min-height: 10vh;
@@ -26,7 +23,6 @@
 
 input[type="text"] {
     font-size: 1.5rem;
-    /* padding-right: 15rem; */
     width: 32.4rem;
 }
 
@@ -51,4 +47,96 @@ input[type="text"] {
     border-radius: .5rem;
     position: relative;
     left: 220px;
+} */
+
+/* General Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.bottom-border {
+    border-bottom: 3px solid #a21caf;
+}
+
+.blogify-logo {
+    width: 70px; /* Adjusted for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 18px;
+}
+
+/* Main Container */
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* Form Container */
+.to-do-list-container {
+    background-color: #1e1e1e; /* Dark background for contrast */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+input[type="text"], 
+textarea.description {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+textarea.description {
+    resize: none; /* Prevent resizing */
+}
+
+/* Button Styling */
+.edit-button {
+    background-color: #a21caf;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .blogify-logo {
+        width: 60px; /* Smaller logo for mobile */
+    }
+
+    input[type="text"], 
+    textarea.description {
+        font-size: 0.9rem;
+    }
+
+    .edit-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .to-do-list-container {
+        padding: 1rem;
+    }
+
+    input[type="text"], 
+    textarea.description {
+        font-size: 0.8rem;
+    }
+
+    .edit-button {
+        padding: 0.5rem;
+    }
 }

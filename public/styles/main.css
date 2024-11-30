@@ -1,4 +1,4 @@
-*,*::before, *::after {
+/* *,*::before, *::after {
     box-sizing: border-box;
     margin: 0;
 }
@@ -54,4 +54,118 @@ ul {
     border-radius: .5rem;
     position: relative;
     left: 220px;
+} */
+
+/* General Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Blogify Logo */
+.blogify-logo {
+    width: 70px; /* Adjust for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 18px;
+}
+
+/* Header Border */
+.bottom-border {
+    border-bottom: 3px solid #a21caf;
+}
+
+/* Centered Heading */
+h1 {
+    text-align: center;
+    margin: 1rem 0; /* Add space around heading */
+}
+
+/* To-Do List Container */
+.to-do-list-container {
+    display: flex;
+    min-height: 10vh;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Input Fields */
+input[type="text"], 
+textarea.description {
+    font-size: 1.2rem; /* Adjust for smaller screens */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 600px; /* Limit width on larger screens */
+    margin-bottom: 1rem; /* Add spacing between fields */
+    padding: 0.5rem; /* Comfortable padding */
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+
+/* Textarea Specific */
+textarea.description {
+    resize: none; /* Prevent resizing */
+}
+
+/* Button Styling */
+.add-button {
+    background-color: #a21caf;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* Button spans the width */
+    max-width: 200px; /* Limit button size */
+    margin: 0 auto; /* Center on smaller screens */
+    display: block;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Component */
+.component {
+    border: 1px solid black;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Limit width on larger screens */
+    margin: 1rem auto; /* Center */
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .blogify-logo {
+        width: 60px; /* Smaller logo for mobile */
+    }
+
+    input[type="text"], 
+    textarea.description {
+        font-size: 1rem; /* Reduce font size */
+    }
+
+    .add-button {
+        font-size: 0.9rem; /* Adjust button text */
+    }
+}
+
+@media (max-width: 576px) {
+    .to-do-list-container {
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    input[type="text"], 
+    textarea.description {
+        font-size: 0.9rem; /* Smaller font */
+    }
+
+    .add-button {
+        padding: 0.5rem 1rem; /* Adjust button padding */
+    }
 }

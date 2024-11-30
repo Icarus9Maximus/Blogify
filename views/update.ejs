@@ -38,44 +38,47 @@
       </ul>
     </header>
 
-<main>
-  <h1 class="text-white d-flex justify-content-center">Update</h1>
-  <div class="to-do-list-container text-white">
-    <form action="/update/<%= index %>" method="post">
-      <p>
-        <input
-          type="text"
-          placeholder="What is your name"
-          name="updateName"
-          value="<%= item.name %>"
-          required
-        />
-      </p>
-      <p>
-        <input
-          type="text"
-          placeholder="Title"
-          name="updateTitle"
-          value="<%= item.title %>"
-        />
-      </p>
-      <p>
-        <label for="description">
-          <textarea
-            name="updateDescription"
-            id="description"
-            cols="45"
-            rows="7"
-            placeholder="What's on your mind...."
-            class="description"
-          ><%= item.description %></textarea>
-        </label>
-      </p>
-      <button class="edit-button" type="submit" name="plan">Update</button>
-    </form>
-  </div>
-</main>
-
+    <main class="container">
+      <h1 class="text-white text-center mb-4">Update</h1>
+      <div class="to-do-list-container">
+        <form action="/update/<%= index %>" method="post">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="What is your name"
+              name="updateName"
+              value="<%= item.name %>"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Title"
+              name="updateTitle"
+              value="<%= item.title %>"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <textarea
+              class="form-control description"
+              name="updateDescription"
+              id="description"
+              placeholder="What's on your mind..."
+              maxlength="2000"
+              rows="7"
+              required
+            ><%= item.description %></textarea>
+          </div>
+          <button class="btn btn-primary w-100 edit-button" type="submit" name="plan">
+            Update
+          </button>
+        </form>
+      </div>
+    </main>
 
     <%- include("partials/footer") %>
   </body>

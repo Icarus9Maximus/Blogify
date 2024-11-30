@@ -4,6 +4,19 @@
     padding: 0;
 }
 
+/* new */
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header.container {
+    flex-direction: column;
+    text-align: center;
+}
+/* end */
+
 .bottom-border {
     border-bottom: 3px solid #a21caf;
 }
@@ -39,11 +52,24 @@
     margin-top: -88px;
 }
 
-.blogify-logo {
+/* .blogify-logo {
     width: 90px;
     height: 68px;
     border-radius: 18px;
-}
+} */
+ .blogify-logo {
+    width: 70px;
+    height: auto;
+ }
+
+ .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+
+ h1.display-5 {
+    font-size: 2rem;
+ }
 
 .avatar-segment {
     transition: transform 1s ease-out, opacity 1s ease-out;
@@ -55,18 +81,64 @@
     transform: translateY(0);
     opacity: 1;
 }
+/* new */
+.avatar-segment img {
+    width: 100%;
+    max-width: 400px;
+}
+/* end */
 
-.carousel-size {
+/* .carousel-size {
     width: 800px;
     border-radius: 130px;
     margin-top: 3rem;
-}
+} */
 
 .carousel-size {
+    width: 100%;
+    border-radius: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
     transform: translateY(-100px);
     opacity: 0;
 }
+
+/* .carousel-size {
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    transform: translateY(-100px);
+    opacity: 0;
+} */
+
+/* start */
+.carousel-inner .carousel-item img {
+    opacity: 0.7;
+}
+
+/* .carousel-caption {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+} */
+
+.carousel-caption {
+    /* position: absolute; */
+    /* bottom: 10%; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* text-align: center; */
+    color: white;
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* padding: .2rem; */
+    /* border-radius: 0.5rem; */
+    /* max-width: 100%; */
+    /* font-size: 2px; */
+    margin-top: 500px;
+}
+
+.carousel-inner img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* end */
 
 .carousel-size.visible {
     transform: translateY(0);
@@ -76,3 +148,78 @@
 .icons {
     width: 44px;
 }
+
+
+/* new */
+@media (max-width: 768px) {
+    header.container {
+        flex-direction: column;
+    }
+
+    .jumbotron {
+        padding: 1rem;
+    }
+
+    .carousel-size {
+        margin-top: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1.display-5 {
+        font-size: 1.8rem;
+    }
+
+    p.mission {
+        font-size: 0.9rem;
+    }
+
+    .avatar-segment {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* end */
+
+/* start */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .carousel-inner img {
+        height: 500px; /* Set a specific height */
+        object-fit: cover; /* Ensure the image fits well without distortion */
+    }
+
+    .carousel-caption {
+        bottom: 20px; /* Adjust caption positioning for better visibility */
+    }
+}
+
+/* For screens wider than 1440px */
+@media (min-width: 1440px) {
+    .carousel-inner img {
+        height: 600px; /* Slightly larger for ultra-wide screens */
+        object-fit: cover; /* Ensure the image scales properly */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .carousel-inner img {
+        height: 300px; /* Smaller height for tablets and smaller laptops */
+        object-fit: cover; 
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+/* end */
